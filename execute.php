@@ -14,12 +14,12 @@ $commands_paths = [
     __DIR__ . '/Commands/',
 ];
 // Enter your MySQL database credentials
-$mysql_credentials = [
-    'host'     => '89.46.111.68',
-    'user'     => 'Sql1228856',
-    'password' => '0218k30204',
-    'database' => 'Sql1228856_5',
-];
+// $mysql_credentials = [
+//   'host'     => '89.46.111.68',
+//     'user'     => 'Sql1228856',
+//     'password' => '0218k30204',
+//     'database' => 'Sql1228856_5',
+// ];
 
 $DB_ADDRESS="89.46.111.68";
 $DB_USER="Sql1228856";
@@ -73,7 +73,7 @@ else
 	$response = "Comando non valido!";
 }
 
-$response .= $response . $commands_paths;
+$response .=  $commands_paths[0];
 
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
