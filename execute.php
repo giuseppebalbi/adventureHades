@@ -21,8 +21,17 @@ $mysql_credentials = [
     'database' => 'Sql1228856_5',
 ];
 
+$DB_ADDRESS="89.46.111.68";
+$DB_USER="Sql1228856";
+$DB_PASS="0218k30204";
+$DB_NAME="Sql1228856_5";
 
 
+$conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);
+if($conn->connect_error){                                                           //checks connection
+	header("HTTP/1.0 400 Bad Request")
+	echo "ERROR Database Connection Failed: " . $conn->connect_error, E_USER_ERROR;   //reports a DB connection failure
+} 
 
 
 
