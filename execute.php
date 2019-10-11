@@ -27,7 +27,7 @@ $DB_PASS="0218k30204";
 $DB_NAME="Sql1228856_5";
 
 
-$conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);
+//$conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);
 
 
 
