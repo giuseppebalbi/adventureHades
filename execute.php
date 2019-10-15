@@ -73,7 +73,7 @@ else
 	$response = "Comando non valido!";
 }
 
-$response .=  $commands_paths[0];
+$response .=  $commands_paths[];
 
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
