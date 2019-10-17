@@ -50,7 +50,7 @@ $username = isset($message['chat']['username']) ? $message['chat']['username'] :
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
 
-
+/*
 $sql = "INSERT INTO user (first_name, last_name, username) VALUES ('" . $firstname . "','" . $lastname . "','" . $username. "')";
 if (mysqli_query($conn, $sql)) {
 	$ciao =  "New record created successfully";
@@ -60,7 +60,7 @@ if (mysqli_query($conn, $sql)) {
 
 mysqli_close($conn);
 
-
+*/
 
 $text = trim($text);
 $text = strtolower($text);
