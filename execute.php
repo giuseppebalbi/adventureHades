@@ -27,6 +27,8 @@ $DB_PASS="0218k30204";
 $DB_NAME="Sql1228856_5";
 
 
+
+
 //$conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);
 
 
@@ -70,7 +72,7 @@ elseif($text=="domanda 2")
 }
 else
 {
-	$response = "Comando non valido!";
+	$response = "Comando valido!";
 }
 
 //$response .=  $commands_paths[];
