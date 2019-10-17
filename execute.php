@@ -29,9 +29,9 @@ $DB_NAME="Sql1228856_5";
 
 
 
-//$conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);
+$conn = new mysqli($DB_ADDRESS,$DB_USER,$DB_PASS,$DB_NAME);
 
-
+//echo "Connected successfully";
 
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
@@ -49,6 +49,18 @@ $lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name']
 $username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
+
+
+$sql = "INSERT INTO user (first_name, last_name, username) VALUES ('" . $firstname . "','" . $lastname . "','" . $username. "')";
+if (mysqli_query($conn, $sql)) {
+	$ciao =  "New record created successfully";
+} else {
+	$ciao =  "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+
 
 $text = trim($text);
 $text = strtolower($text);
@@ -75,7 +87,7 @@ else
 	$response = "Comando valido!";
 }
 
-//$response .=  $commands_paths[];
+$response .= $ciao;
 
 
 $parameters = array('chat_id' => $chatId, "text" => $response);
